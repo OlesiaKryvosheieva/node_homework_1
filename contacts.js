@@ -11,9 +11,7 @@ const listContacts = async () => {
 
 const getContactById = async (contactId) => {
   const allContacts = await listContacts();
-  const contactById = allContacts.findIndex(
-    (contact) => (contact.id = contactId)
-  );
+  const contactById = allContacts.find((contact) => (contact.id = contactId));
   return contactById || null;
 };
 
